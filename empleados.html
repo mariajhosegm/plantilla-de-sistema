@@ -208,8 +208,32 @@
             </li>
             <!-- Fin M O -->
             <!-- Multiples opciones -->
+              <!-- JORGE -->
             <li class="nav-item">
               <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-boxes"></i>
+                <p>
+                  Inventarios
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="./ProductosTerminados.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Productos Terminados</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="./MateriaPrima.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Materia Prima</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="./empleados.html" class="nav-link">
                 <i class="nav-icon fas fa-users"></i> <!-- Cambio de Icono a las Opciones -->
                 <p>
                   Empleados
@@ -217,20 +241,46 @@
                 </p>
               </a>
               <ul class="nav nav-treeview">
-                <!-- Inicio Opciones de MO -->
                 <li class="nav-item">
                   <a href="./index.html" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Registro de Empleados</p>
                   </a>
                 </li>
-                <!-- Fin Opciones de MO -->
-                <!-- Fin M O -->
-                <!-- Fin del menu -->
               </ul>
+              </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-cogs"></i>
+                <p>
+                  Configuración
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="./" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Usuarios de Sistema</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="./" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Indormación de Sistema</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="./" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Ajustes de Configuración</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
         </nav>
       </div>
-      <!-- /.sidebar -->
     </aside>
 
     <!-- Contenido -->
@@ -239,12 +289,12 @@
         <div class="container-fluid">
           <div class="row mb-2">
             <div class="col-sm-6">
-              <h1 class="m-0">Bienvenido @usuario</h1>
+              <h1 class="m-0">Registro de empleados</h1>
             </div>
             <div class="col-sm-6">
               <ol class="breadcrumb float-sm-right">
                 <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
-                <li class="breadcrumb-item active">Inicio</li>
+                <li class="breadcrumb-item active">Empleados</li>
               </ol>
             </div>
           </div>
@@ -253,9 +303,128 @@
         <!-- Contenido de la pagina -->
 
         <div class="container mt-1">
-          
-          
-
+            <div class="card mt-2">
+                <div class="card-body">
+                   <div class="mb-2">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#empleado">
+                        Agregar nuevo
+                      </button>   
+                   </div>
+                  <table id="example2" class="table table-bordered table-hover">
+                    <thead>
+                    <tr>
+                      <th>Nombre</th>
+                      <th>Apellido</th>
+                      <th>Nacimiento</th>
+                      <th>Dirección</th>
+                      <th>Teléfono</th>
+                      <th>Celular</th>
+                      <th>Email</th>
+                      <th>Opciones</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Mauricio</td>
+                        <td>Ponce</td>
+                        <td>1807197088078</td>
+                        <td>Col. La Rosa</td>
+                        <td>2446-5467</td>
+                        <td>9805-5564</td>
+                        <td>mauricioponce@gmail.com</td>
+                      <td>
+                        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#editempleado">
+                            <i class="fas fa-edit"></i>
+                          </button>       
+                          <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteempleado">
+                            <i class="fas fa-trash-alt"></i>
+                          </button>       
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+                <!-- /.card-body -->
+              </div>
+       
+              <div class="modal fade" id="empleado">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h4 class="modal-title">Agregar nuevo registro</h4>
+                    </div>
+                    <div class="modal-body row">
+                     
+                        <div class="mb-2 mt-2 col-6"><input type="text" class="form-control" placeholder="Nombre"></div>
+                        <div class="mb-2 mt-2 col-6"><input type="text" class="form-control" placeholder="Apellido"></div>
+                        <div class="mb-2 mt-2 col-12">
+                            <label for="">Fecha de Nacimiento: </label>
+                            <input type="date" class="form-control"></div>
+                        <div class="mb-2 mt-2 col-12"><textarea class="form-control" cols="30" rows="3">Dirección</textarea></div>
+                        <div class="mb-2 mt-2 col-6"><input type="text" class="form-control" placeholder="Teléfono"></div>
+                        <div class="mb-2 mt-2 col-6"><input type="text" class="form-control" placeholder="Celular"></div>
+                        <div class="mb-2 mt-2 col-12"><input type="text" class="form-control" placeholder="Correo Eléctronico"></div>
+                        <div class="mt-2 col-12"><label for="">Tipo de usuario a generar: </label></div>
+                <div class="mb-2 mt-2 col-12">
+                <select class="form-control">
+                    <option value="">Seleccione una opción</option>
+                    <option value="">Administrador</option>
+                    <option value="">Supervisor</option>
+                    <option value="">Operador</option>
+                </select></div>
+                    </div>
+                    <div class="modal-footer justify-content-between">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                      <button type="button" class="btn btn-primary">Agregar registro</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /.modal -->
+        
+              <div class="modal fade" id="editempleado">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h4 class="modal-title">Actualizar registro</h4>
+                    </div>
+                    <div class="modal-body row">
+                     
+                        <div class="mb-2 mt-2 col-6"><input type="text" class="form-control" placeholder="Nombre"></div>
+                        <div class="mb-2 mt-2 col-6"><input type="text" class="form-control" placeholder="Apellido"></div>
+                        <div class="mb-2 mt-2 col-12">
+                        <label for="">Fecha de Nacimiento: </label>
+                        <input type="date" class="form-control"></div>
+                        <div class="mb-2 mt-2 col-12"><textarea class="form-control" cols="30" rows="3">Dirección</textarea></div>
+                        <div class="mb-2 mt-2 col-6"><input type="text" class="form-control" placeholder="Teléfono"></div>
+                        <div class="mb-2 mt-2 col-6"><input type="text" class="form-control" placeholder="Celular"></div>
+                        <div class="mb-2 mt-2 col-12"><input type="text" class="form-control" placeholder="Correo Eléctronico"></div>
+                                            </div>
+                    <div class="modal-footer justify-content-between">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                      <button type="button" class="btn btn-warning">Guardar cambios</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /.modal -->
+        
+              <div class="modal fade" id="deleteempleado">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h4 class="modal-title">Agregar nuevo registro</h4>
+                    </div>
+                    <div class="modal-body row">
+                     <h6>¿Seguro que deseas eliminar el registro?</h6>
+                    </div>
+                    <div class="modal-footer justify-content-between">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                      <button type="button" class="btn btn-danger">Eliminar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /.modal -->
 
         </div>
         <!-- Final del dataTables  -->
@@ -280,6 +449,9 @@
     <!-- /.control-sidebar -->
   </div>
   <!-- ./wrapper -->
+
+
+
 
   <!-- jQuery -->
   <script src="plugins/jquery/jquery.min.js"></script>

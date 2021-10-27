@@ -208,8 +208,32 @@
             </li>
             <!-- Fin M O -->
             <!-- Multiples opciones -->
+              <!-- JORGE -->
             <li class="nav-item">
               <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-boxes"></i>
+                <p>
+                  Inventarios
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="./ProductosTerminados.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Productos Terminados</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="./MateriaPrima.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Materia Prima</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="./empleados.html" class="nav-link">
                 <i class="nav-icon fas fa-users"></i> <!-- Cambio de Icono a las Opciones -->
                 <p>
                   Empleados
@@ -217,20 +241,46 @@
                 </p>
               </a>
               <ul class="nav nav-treeview">
-                <!-- Inicio Opciones de MO -->
                 <li class="nav-item">
                   <a href="./index.html" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Registro de Empleados</p>
                   </a>
                 </li>
-                <!-- Fin Opciones de MO -->
-                <!-- Fin M O -->
-                <!-- Fin del menu -->
               </ul>
+              </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-cogs"></i>
+                <p>
+                  Configuración
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="./" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Usuarios de Sistema</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="./" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Indormación de Sistema</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="./" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Ajustes de Configuración</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
         </nav>
       </div>
-      <!-- /.sidebar -->
     </aside>
 
     <!-- Contenido -->
@@ -239,12 +289,12 @@
         <div class="container-fluid">
           <div class="row mb-2">
             <div class="col-sm-6">
-              <h1 class="m-0">Bienvenido @usuario</h1>
+              <h1 class="m-0">Cuentas por cobrar</h1>
             </div>
             <div class="col-sm-6">
               <ol class="breadcrumb float-sm-right">
                 <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
-                <li class="breadcrumb-item active">Inicio</li>
+                <li class="breadcrumb-item active">Cobros</li>
               </ol>
             </div>
           </div>
@@ -253,9 +303,72 @@
         <!-- Contenido de la pagina -->
 
         <div class="container mt-1">
-          
-          
+            <div class="card mt-2">
+                <div class="card-body">
+                   <div class="mb-2">
+                   </div>
+                  <table id="example2" class="table table-bordered table-hover">
+                    <thead>
+                    <tr>
+                      <th>Código</th>
+                      <th>Cliente</th>
+                      <th>Fecha de pago</th>
+                      <th>No. cuotas</th>
+                      <th>Periodo de cuotas</th>
+                      <th>Saldo</th>
+                      <th>Estado</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>100</td>
+                        <td>Juan Alberto Moncada Carvajal</td>
+                        <td>12-11-2021</td>
+                        <td>2</td>
+                        <td>Mesual</td>
+                        <td>1300.00</td>
+                        <td>Al día</td>
+                                </tr>
+                  </table>
+                </div>
+                <!-- /.card-body -->
+              </div>
+        
+              <div class="modal fade" id="aprobar">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h4 class="modal-title">Aprobación</h4>
+                    </div>
+                    <div class="modal-body row">
+                     <h6>¿Seguro que deseas aprobar esta cotización?</h6>
+                    </div>
+                    <div class="modal-footer justify-content-between">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                      <button type="button" class="btn btn-success">Continuar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /.modal -->
 
+              <div class="modal fade" id="cancelar">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h4 class="modal-title">Cancelar</h4>
+                    </div>
+                    <div class="modal-body row">
+                     <h6>¿Seguro que deseas cancelar esta cotización?</h6>
+                    </div>
+                    <div class="modal-footer justify-content-between">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                      <button type="button" class="btn btn-danger">Continuar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /.modal -->
 
         </div>
         <!-- Final del dataTables  -->
@@ -280,6 +393,9 @@
     <!-- /.control-sidebar -->
   </div>
   <!-- ./wrapper -->
+
+
+
 
   <!-- jQuery -->
   <script src="plugins/jquery/jquery.min.js"></script>
