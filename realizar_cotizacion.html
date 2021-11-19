@@ -324,82 +324,148 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0">Cuentas por cobrar</h1>
+                            <h1 class="m-0">Realizar Cotización</h1>
                         </div>
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
-                                <li class="breadcrumb-item active">Cuentas por cobrar</li>
+                                <li class="breadcrumb-item active">Cotizaciones</li>
                             </ol>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="container">
-                <div class="card mt-2">
-                    <div class="card-body">
-                        <div class="mb-2">
-                        </div>
-                        <table id="example2" class="table table-bordered table-hover">
-                            <thead>
-                                <tr>
-                                    <th>Código</th>
-                                    <th>Cliente</th>
-                                    <th>Cuotas</th>
-                                    <th>Periodo</th>
-                                    <th>Monto</th>
-                                    <th>Fecha de pago</th>
-                                    <th>Saldo</th>
-                                    <th>Estado</th>
-                                    <th>Opciones</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>100</td>
-                                    <td>Mauricio Alvarez</td>
-                                    <td>12</td>
-                                    <td>Semanal</td>
-                                    <td>200.00</td>
-                                    <td>Jueves</td>
-                                    <td>1200.00</td>
-                                    <td>En proceso</td>
-                                    <td>
-                                        <button type="button" class="btn btn-success btn-block" data-toggle="modal"
-                                            data-target="#abono">
-                                            <i class="fas fa-plus-square"></i>
+
+            <div class="container mt-1">
+
+                <div class="row">
+
+                    <div class="col-5">
+
+                        <div class="card">
+                            <div class="card-header">Información de la cotización</div>
+                            <div class="card-body">
+                                <div class="row">
+
+                                    <div class="col-12 mt-2"><label for="exampleSelectRounded0">Nombre del
+                                            cliente:</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+
+                                    <div class="col-12 mt-2"><label for="exampleSelectRounded0">Fecha:</label>
+                                        <input type="date" value="2021-10-08" class="form-control" disabled>
+                                    </div>
+
+                                    <div class="col-12 mt-4">
+                                        <button type="button" class="btn btn-primary btn-block btn-flat"
+                                            data-toggle="modal" data-target="#producto">
+                                            Agregar productos
                                         </button>
-                                    </td>
-                                </tr>
-                            </table>
-                    </div>
-                </div>
-            </div>
+                                    </div>
 
-        </div>
+                                </div>
 
-        <div class="modal fade" id="abono">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h4 class="modal-title">Registrar abono de Cliente!</h4>
-                    </div>
-                    <div class="modal-body row">
-                        <div class="mb-2 mt-2 col-12"><input type="text" class="form-control" disabled value="100"></div>
-                                            <div class="mb-2 mt-2 col-12"><input type="text" class="form-control" placeholder="Monto"></div>
-                        <div class="mb-2 mt-2 col-12"><textarea class="form-control" cols="30" rows="3"
-                                placeholder="Obsevaciones"></textarea>
+                            </div>
                         </div>
-                        <div class="mb-2 mt-2 col-12"><input type="text" disabled class="form-control" placeholder="Fecha" value="20-11-2021"></div>
-                       </div>
-                    <div class="modal-footer justify-content-between">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                        <button type="button" class="btn btn-success">Aceptar</button>
+
+
+                        <div class="modal fade" id="producto">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Agregar productos</h4>
+                                    </div>
+                                    <div class="modal-body row">
+
+                                        <div class="mb-2 mt-2 col-12"><input type="text" class="form-control"
+                                                placeholder="Código"></div>
+                                        <div class="mb-2 mt-2 col-12"><input type="text" class="form-control"
+                                                placeholder="Nombre"></div>
+                                        <div class="mb-2 mt-2 col-12"><input type="text" class="form-control"
+                                                placeholder="Precio" disabled></div>
+                                        <div class="mb-2 mt-2 col-12"><input type="text" class="form-control"
+                                                placeholder="Cantidad"></div>
+                                        <div class="mb-2 mt-2 col-12"><input type="text" class="form-control"
+                                                placeholder="Total" disabled></div>
+
+                                    </div>
+                                    <div class="modal-footer justify-content-between">
+                                        <button type="button" class="btn btn-default"
+                                            data-dismiss="modal">Cerrar</button>
+                                        <button type="button" class="btn btn-primary">Agregar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
                     </div>
+
+                    <div class="col-7">
+
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">Productos solicitados</h3>
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body p-0">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 10px">#</th>
+                                            <th>Nombre</th>
+                                            <th>Precio</th>
+                                            <th style="width: 40px">
+                                                Opciones
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Ventanas de vidrio</td>
+                                            <td>140.00</td>
+                                            <td><button class="btn btn-danger"><i
+                                                        class="far fa-window-close"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>7</td>
+                                            <td>Ventanas de madera</td>
+                                            <td>400.00</td>
+                                            <td><button class="btn btn-danger"><i
+                                                        class="far fa-window-close"></i></button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="card-footer">
+                                <div class="row">
+                                    <div class="col-4">
+                                        Subtotal: <label class="text-center">1275.00</label>
+                                    </div>
+                                    <div class="col-4">
+                                        ISV: <label class="text-center">225.00</label>
+                                    </div>
+                                    <div class="col-4">
+                                        Total: <label class="text-center">1500.00</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
                 </div>
+
             </div>
+
+
         </div>
+
+
 
 
         <!-- Footer -->

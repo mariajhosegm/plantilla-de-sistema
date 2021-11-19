@@ -318,88 +318,109 @@
             </div>
         </aside>
 
-        <!-- Contenido de la pagina -->
         <div class="content-wrapper">
             <div class="content-header">
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0">Cuentas por cobrar</h1>
+                            <h1 class="m-0">Historial de Facturas</h1>
                         </div>
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
-                                <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
-                                <li class="breadcrumb-item active">Cuentas por cobrar</li>
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item active">Facturas</li>
                             </ol>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="container">
-                <div class="card mt-2">
-                    <div class="card-body">
-                        <div class="mb-2">
+                <!-- Contenido de la pagina -->
+
+                <div class="container mt-1">
+                    <div class="card card-outline card-primary">
+                        <div class="card-header">
+                            <h3 class="card-title">Facturas del sistema</h3>
                         </div>
-                        <table id="example2" class="table table-bordered table-hover">
-                            <thead>
-                                <tr>
-                                    <th>Código</th>
-                                    <th>Cliente</th>
-                                    <th>Cuotas</th>
-                                    <th>Periodo</th>
-                                    <th>Monto</th>
-                                    <th>Fecha de pago</th>
-                                    <th>Saldo</th>
-                                    <th>Estado</th>
-                                    <th>Opciones</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>100</td>
-                                    <td>Mauricio Alvarez</td>
-                                    <td>12</td>
-                                    <td>Semanal</td>
-                                    <td>200.00</td>
-                                    <td>Jueves</td>
-                                    <td>1200.00</td>
-                                    <td>En proceso</td>
-                                    <td>
-                                        <button type="button" class="btn btn-success btn-block" data-toggle="modal"
-                                            data-target="#abono">
-                                            <i class="fas fa-plus-square"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                            </table>
+                        <div class="card-body">
+                            <div class="container-fluid pt-3">
+                                <div id="example2_wrapper" class="dataTables_wrapper dt-bootstrap4">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <table id="example2"
+                                                class="table table-bordered table-hover dataTable dtr-inline"
+                                                aria-describedby="example2_info">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="sorting sorting_asc" tabindex="0"
+                                                            aria-controls="example2" rowspan="1" colspan="1"
+                                                            aria-sort="ascending"
+                                                            aria-label="Rendering engine: activate to sort column descending">
+                                                            Codigo de factura</th>
+                                                        <th class="sorting" tabindex="0" aria-controls="example2"
+                                                            rowspan="1" colspan="1"
+                                                            aria-label="Browser: activate to sort column ascending">
+                                                            Nombre del cliente</th>
+                                                        <th class="sorting" tabindex="0" aria-controls="example2"
+                                                            rowspan="1" colspan="1"
+                                                            aria-label="Browser: activate to sort column ascending">
+                                                            Fecha</th>
+                                                        <th class="sorting" tabindex="0" aria-controls="example2"
+                                                            rowspan="1" colspan="1"
+                                                            aria-label="Platform(s): activate to sort column ascending">
+                                                            Subtotal</th>
+                                                        <th class="sorting" tabindex="0" aria-controls="example2"
+                                                            rowspan="1" colspan="1"
+                                                            aria-label="Engine version: activate to sort column ascending">
+                                                            ISV</th>
+                                                        <th class="sorting" tabindex="0" aria-controls="example2"
+                                                            rowspan="1" colspan="1"
+                                                            aria-label="CSS grade: activate to sort column ascending">
+                                                            Total</th>
+                                                        <th class="sorting" tabindex="0" aria-controls="example2"
+                                                            rowspan="1" colspan="1"
+                                                            aria-label="CSS grade: activate to sort column ascending">
+                                                            Opciones</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="odd">
+                                                        <td class="dtr-control sorting_1" tabindex="0">FACT001</td>
+                                                        <td>Juan Armando Lopez</td>
+                                                        <td>24-07-2021</td>
+                                                        <td>5647.00</td>
+                                                        <td>234.00</td>
+                                                        <td>6075.00</td>
+                                                        <td><a href="" class="btn btn-success"><i
+                                                                    class="fas fa-print"></i></a></td>
+                                                    </tr>
+                                                    <tr class="even">
+                                                        <td class="dtr-control sorting_1" tabindex="0">FACT002</td>
+                                                        <td>Hernan Luciano Munguia</td>
+                                                        <td>25-03-2021</td>
+                                                        <td>10049.00</td>
+                                                        <td>675.00</td>
+                                                        <td>11042.00</td>
+                                                        <td><a href="" class="btn btn-success"><i
+                                                                    class="fas fa-print"></i></a></td>
+                                                    </tr>
+                                                    </tfoot>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-        </div>
 
-        <div class="modal fade" id="abono">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h4 class="modal-title">Registrar abono de Cliente!</h4>
-                    </div>
-                    <div class="modal-body row">
-                        <div class="mb-2 mt-2 col-12"><input type="text" class="form-control" disabled value="100"></div>
-                                            <div class="mb-2 mt-2 col-12"><input type="text" class="form-control" placeholder="Monto"></div>
-                        <div class="mb-2 mt-2 col-12"><textarea class="form-control" cols="30" rows="3"
-                                placeholder="Obsevaciones"></textarea>
-                        </div>
-                        <div class="mb-2 mt-2 col-12"><input type="text" disabled class="form-control" placeholder="Fecha" value="20-11-2021"></div>
-                       </div>
-                    <div class="modal-footer justify-content-between">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                        <button type="button" class="btn btn-success">Aceptar</button>
-                    </div>
-                </div>
+
+                <!-- Fin contenido de la pagina -->
             </div>
         </div>
+
+
+
 
 
         <!-- Footer -->

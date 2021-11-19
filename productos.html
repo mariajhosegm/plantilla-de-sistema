@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="utf-8">
@@ -324,12 +324,12 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0">Cuentas por cobrar</h1>
+                            <h1 class="m-0">Registro de productos</h1>
                         </div>
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
-                                <li class="breadcrumb-item active">Cuentas por cobrar</li>
+                                <li class="breadcrumb-item active">Productos</li>
                             </ol>
                         </div>
                     </div>
@@ -340,35 +340,40 @@
                 <div class="card mt-2">
                     <div class="card-body">
                         <div class="mb-2">
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#add">
+                                Agregar nuevo
+                            </button>
                         </div>
                         <table id="example2" class="table table-bordered table-hover">
                             <thead>
                                 <tr>
                                     <th>Código</th>
-                                    <th>Cliente</th>
-                                    <th>Cuotas</th>
-                                    <th>Periodo</th>
-                                    <th>Monto</th>
-                                    <th>Fecha de pago</th>
-                                    <th>Saldo</th>
-                                    <th>Estado</th>
+                                    <th>Nombre</th>
+                                    <th>Descripción</th>
+                                    <th>Precio</th>
+                                    <th>Cantidad</th>
                                     <th>Opciones</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>100</td>
-                                    <td>Mauricio Alvarez</td>
-                                    <td>12</td>
-                                    <td>Semanal</td>
-                                    <td>200.00</td>
-                                    <td>Jueves</td>
-                                    <td>1200.00</td>
-                                    <td>En proceso</td>
+                                    <td>110</td>
+                                    <td>Puerta de vidrio</td>
                                     <td>
-                                        <button type="button" class="btn btn-success btn-block" data-toggle="modal"
-                                            data-target="#abono">
-                                            <i class="fas fa-plus-square"></i>
+                                        Alto 200cm, Ancho 300cm, Grosor 20cm. con detalles de metal.
+                                    </td>
+                                    <td>
+                                        900.00
+                                    </td>
+                                    <td><center>2</center></td>
+                                    <td>
+                                        <button type="button" class="btn btn-warning btn-block" data-toggle="modal"
+                                            data-target="#edit">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-danger btn-block" data-toggle="modal"
+                                            data-target="#delete">
+                                            <i class="fas fa-trash-alt"></i>
                                         </button>
                                     </td>
                                 </tr>
@@ -379,27 +384,72 @@
 
         </div>
 
-        <div class="modal fade" id="abono">
+
+        <div class="modal fade" id="add">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h4 class="modal-title">Registrar abono de Cliente!</h4>
+                        <h4 class="modal-title">Registro de producto</h4>
                     </div>
                     <div class="modal-body row">
-                        <div class="mb-2 mt-2 col-12"><input type="text" class="form-control" disabled value="100"></div>
-                                            <div class="mb-2 mt-2 col-12"><input type="text" class="form-control" placeholder="Monto"></div>
+                        <div class="mb-2 mt-2 col-12"><input type="text" class="form-control" placeholder="Nombre"></div>
                         <div class="mb-2 mt-2 col-12"><textarea class="form-control" cols="30" rows="3"
-                                placeholder="Obsevaciones"></textarea>
+                                placeholder="Descripción"></textarea>
                         </div>
-                        <div class="mb-2 mt-2 col-12"><input type="text" disabled class="form-control" placeholder="Fecha" value="20-11-2021"></div>
-                       </div>
+                        <div class="mb-2 mt-2 col-12"><input type="text" class="form-control" placeholder="Precio"></div>
+                        <div class="mb-2 mt-2 col-12"><input type="text" class="form-control" placeholder="Cantidad"></div>
+                                            </div>
                     <div class="modal-footer justify-content-between">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                        <button type="button" class="btn btn-success">Aceptar</button>
+                        <button type="button" class="btn btn-primary">Aceptar</button>
                     </div>
                 </div>
             </div>
         </div>
+    
+    
+        <div class="modal fade" id="edit">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Editar producto</h4>
+                    </div>
+                    <div class="modal-body row">
+                        <div class="mb-2 mt-2 col-12"><input type="text" class="form-control" placeholder="Nombre"></div>
+                        <div class="mb-2 mt-2 col-12"><textarea class="form-control" cols="30" rows="3"
+                                placeholder="Descripción"></textarea>
+                        </div>
+                        <div class="mb-2 mt-2 col-12"><input type="text" class="form-control" placeholder="Precio"></div>
+                        <div class="mb-2 mt-2 col-12"><input type="text" class="form-control" placeholder="Cantidad"></div>
+                                            </div>
+                    <div class="modal-footer justify-content-between">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-warning">Aceptar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    
+        <div class="modal fade" id="delete">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Atención!</h4>
+                    </div>
+                    <div class="modal-body row">
+                        <div class="mb-2 mt-2 col-12">
+                            <p>¿Seguro que desea eliminar el registro?</p>
+                        </div>
+                    </div>
+                    <div class="modal-footer justify-content-between">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-danger">Aceptar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
 
 
         <!-- Footer -->

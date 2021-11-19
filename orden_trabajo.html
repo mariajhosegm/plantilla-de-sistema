@@ -324,82 +324,96 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0">Cuentas por cobrar</h1>
+                            <h1 class="m-0">Generar orden de trabajo</h1>
                         </div>
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
-                                <li class="breadcrumb-item active">Cuentas por cobrar</li>
+                                <li class="breadcrumb-item active">Orden de trabajo</li>
                             </ol>
                         </div>
                     </div>
                 </div>
             </div>
 
+
             <div class="container">
-                <div class="card mt-2">
+                <div class="card">
                     <div class="card-body">
-                        <div class="mb-2">
+                        <div class="form-group">
+                            <label for="">Codigo de pedido:</label>
+                            <input type="text" class="form-control">
+                          </div>
+                          <div class="form-group">
+                            <label for="">Fecha de entrega:</label>
+                            <input type="text" class="form-control">
+                          </div>
+                          <div class="form-group">
+                            <label for="">Nivel de prioridad:</label>
+                            <select class="form-control">
+                                <option value="">Alta</option>
+                                <option value="">Media</option>
+                                <option value="">Baja</option>
+                            </select>
+                          </div>
+                          <div class="form-group">
+                            <label for="">Responsable:</label>
+                            <select class="form-control">
+                                <option value="">Dario Munguia Sanchez</option>
+                                <option value="">Pedro Posas Mares</option>
+                                <option value="">Enrique Murillo Lopez</option>
+                            </select>
+                          </div>
+                          
+                          <label for="">Detalle de Pedido:</label>
+                          <div class="card">
+                            <div class="card-body p-0">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Codigo</th>
+                                            <th>Nombre</th>
+                                            <th>Precio</th>
+                                            <th>Cantidad</th>
+                                            <th>Total</th>
+                                            <th>Ver detalles</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1028433</td>
+                                            <td>Ventanas de vidrio</td>
+                                            <td>140.00</td>
+                                            <td>3</td>
+                                            <td>420.00</td>
+                                            <td><a href="" class="btn btn-info"><i class="fas fa-plus"></i></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>748683</td>
+                                            <td>Ventanas de madera</td>
+                                            <td>400.00</td>
+                                            <td>2</td>
+                                            <td>800.00</td>
+                                            <td><a href="" class="btn btn-info"><i class="fas fa-plus"></i></a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
-                        <table id="example2" class="table table-bordered table-hover">
-                            <thead>
-                                <tr>
-                                    <th>Código</th>
-                                    <th>Cliente</th>
-                                    <th>Cuotas</th>
-                                    <th>Periodo</th>
-                                    <th>Monto</th>
-                                    <th>Fecha de pago</th>
-                                    <th>Saldo</th>
-                                    <th>Estado</th>
-                                    <th>Opciones</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>100</td>
-                                    <td>Mauricio Alvarez</td>
-                                    <td>12</td>
-                                    <td>Semanal</td>
-                                    <td>200.00</td>
-                                    <td>Jueves</td>
-                                    <td>1200.00</td>
-                                    <td>En proceso</td>
-                                    <td>
-                                        <button type="button" class="btn btn-success btn-block" data-toggle="modal"
-                                            data-target="#abono">
-                                            <i class="fas fa-plus-square"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                            </table>
+
+                        <div class="form-groud">
+                            <a href="" class="btn btn-block btn-primary">Generar orden de trabajo</a>
+                        </div>
+
+
                     </div>
                 </div>
             </div>
 
+
         </div>
 
-        <div class="modal fade" id="abono">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h4 class="modal-title">Registrar abono de Cliente!</h4>
-                    </div>
-                    <div class="modal-body row">
-                        <div class="mb-2 mt-2 col-12"><input type="text" class="form-control" disabled value="100"></div>
-                                            <div class="mb-2 mt-2 col-12"><input type="text" class="form-control" placeholder="Monto"></div>
-                        <div class="mb-2 mt-2 col-12"><textarea class="form-control" cols="30" rows="3"
-                                placeholder="Obsevaciones"></textarea>
-                        </div>
-                        <div class="mb-2 mt-2 col-12"><input type="text" disabled class="form-control" placeholder="Fecha" value="20-11-2021"></div>
-                       </div>
-                    <div class="modal-footer justify-content-between">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                        <button type="button" class="btn btn-success">Aceptar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+
 
 
         <!-- Footer -->

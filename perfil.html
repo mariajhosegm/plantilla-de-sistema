@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="utf-8">
@@ -114,7 +114,7 @@
                                 <li class="nav-item">
                                     <a href="./ver_cotizaciones.html" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Ver Cotizaciones</p>
+                                        <p>Ver cotizaciones</p>
                                     </a>
                                 </li>
                             </ul>
@@ -147,7 +147,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="./productos_terminados.html" class="nav-link">
+                                    <a href="./materiales.html" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Productos Terminados</p>
                                     </a>
@@ -324,83 +324,56 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0">Cuentas por cobrar</h1>
                         </div>
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
-                                <li class="breadcrumb-item active">Cuentas por cobrar</li>
+                                <li class="breadcrumb-item active">Perfil</li>
                             </ol>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="container">
-                <div class="card mt-2">
-                    <div class="card-body">
-                        <div class="mb-2">
+                <div class="container">
+                    <div class="card">
+                        <div class="card-header">
+                           <i class="fas fa-user mr-2"></i>Mi perfil
                         </div>
-                        <table id="example2" class="table table-bordered table-hover">
-                            <thead>
-                                <tr>
-                                    <th>Código</th>
-                                    <th>Cliente</th>
-                                    <th>Cuotas</th>
-                                    <th>Periodo</th>
-                                    <th>Monto</th>
-                                    <th>Fecha de pago</th>
-                                    <th>Saldo</th>
-                                    <th>Estado</th>
-                                    <th>Opciones</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>100</td>
-                                    <td>Mauricio Alvarez</td>
-                                    <td>12</td>
-                                    <td>Semanal</td>
-                                    <td>200.00</td>
-                                    <td>Jueves</td>
-                                    <td>1200.00</td>
-                                    <td>En proceso</td>
-                                    <td>
-                                        <button type="button" class="btn btn-success btn-block" data-toggle="modal"
-                                            data-target="#abono">
-                                            <i class="fas fa-plus-square"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                            </table>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="modal fade" id="abono">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h4 class="modal-title">Registrar abono de Cliente!</h4>
-                    </div>
-                    <div class="modal-body row">
-                        <div class="mb-2 mt-2 col-12"><input type="text" class="form-control" disabled value="100"></div>
-                                            <div class="mb-2 mt-2 col-12"><input type="text" class="form-control" placeholder="Monto"></div>
-                        <div class="mb-2 mt-2 col-12"><textarea class="form-control" cols="30" rows="3"
-                                placeholder="Obsevaciones"></textarea>
+                        <div class="card-body">
+                            <div class="card card-widget widget-user">
+                                <!-- Add the bg color to the header using any of the bg-* classes -->
+                                <div class="widget-user-header bg-warning">
+                                    <h3 class="widget-user-username">Alexander Pierce</h3>
+                                    <h5 class="widget-user-desc">Founder &amp; CEO</h5>
+                                </div>
+                                <div class="widget-user-image">
+                                    <img class="img-circle" src="./img/user2-160x160.jpg" alt="User Avatar">
+                                </div>
+                                <div class="card-footer">
+                                    <div class="row">
+                                        <div class="col-sm-4 border-right">
+                                            <div class="description-block">
+                                                <a href="./login.html" class="btn btn-secondary btn-flat btn-block">Cerrar sesión</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4 border-right">
+                                            <div class="description-block">
+                                                <a href="#" class="btn btn-success btn-flat btn-block">Cambiar imagen</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="description-block">
+                                                <a href="#" class="btn btn-info btn-flat btn-block">Editar Información</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="mb-2 mt-2 col-12"><input type="text" disabled class="form-control" placeholder="Fecha" value="20-11-2021"></div>
-                       </div>
-                    <div class="modal-footer justify-content-between">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                        <button type="button" class="btn btn-success">Aceptar</button>
                     </div>
                 </div>
             </div>
         </div>
-
 
         <!-- Footer -->
         <footer class="main-footer">
@@ -413,6 +386,7 @@
 
         <aside class="control-sidebar control-sidebar-dark">
         </aside>
+
     </div>
 
     <!-- jQuery -->
